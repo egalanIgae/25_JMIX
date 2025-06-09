@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://jmix.io/schema/flowui/menu">
+
+    <item view="DashboardView" id="dashboard"
+          description="msg://com.company.mainmenudemo/menu_config.dashboard.description"
+          title="msg://com.company.mainmenudemo/menu_config.dashboard.title" icon="lumo:user"
+          shortcutCombination="ALT-D"/>
+    <menu opened="true" id="courses" description="msg://com.company.mainmenudemo/menu_config.courses.description"
+          title="msg://com.company.mainmenudemo/menu_config.courses.title" icon="vaadin:book">
+        <item view="EnrolledCoursesView" id="enrolled-courses"
+              description="msg://com.company.mainmenudemo/menu_config.enrolled-courses.description"
+              title="msg://com.company.mainmenudemo/menu_config.enrolled-courses.title"/>
+        <item view="CourseMaterialsView" id="courses-material"
+              description="msg://com.company.mainmenudemo/menu_config.courses-material.description"
+              title="msg://com.company.mainmenudemo/menu_config.courses-material.title"/>
+        <item view="DiscussionForumsView" id="discussion-forums"
+              description="msg://com.company.mainmenudemo/menu_config.discussion-forums.description"
+              title="msg://com.company.mainmenudemo/menu_config.discussion-forums.title"/>
+    </menu>
+    <separator/>
+    <item bean="menuBean" beanMethod="openLink" id="helpcenter"
+          description="msg://com.company.mainmenudemo/menu_config.helpcenter.description"
+          title="msg://com.company.mainmenudemo/menu_config.helpcenter.title">
+        <properties>
+            <property name="url" value="https://docs.jmix.io"/>
+        </properties>
+    </item>
+    <menu opened="true" id="application" title="msg://com.company.mainmenudemo/menu.application.title">
+        <item view="User.list" title="msg://com.company.mainmenudemo.view.user/UserListView.title"/>
+    </menu>
+
+</menu-config>

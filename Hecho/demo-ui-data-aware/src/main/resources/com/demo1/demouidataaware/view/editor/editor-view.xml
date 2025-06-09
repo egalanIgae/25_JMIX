@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://editorView.title">
+    <data>
+        <instance id="postDc" class="com.demo1.demouidataaware.entity.Post">
+            <loader id="postDl"/>
+            <fetchPlan extends="_base"/>
+        </instance>
+    </data>
+    <layout>
+
+        <richTextEditor dataContainer="postDc" property="contenido"/>
+        <button id="saveButton" text="Guardar"/>
+
+    </layout>
+</view>
